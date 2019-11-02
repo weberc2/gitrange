@@ -6,8 +6,8 @@
 # (exits with nonzero exit code if the file is out of date).
 
 import ast
-import sys
 import os
+import sys
 
 
 def _find_usage(module: ast.Module) -> str:

@@ -6,11 +6,11 @@ set +x
 # Typecheck
 mypy --strict $(find . -name \*.py) > /dev/null
 
-# Format check (all python files in the repo)
-black --check --quiet .
-
 # Lint
 flake8
+isort --check --quiet --trailing-comma
+black --check --quiet .
+
 
 # Check README.md
 repoRoot=$(dirname "$0")

@@ -2,7 +2,6 @@
 import subprocess
 from typing import Tuple
 
-
 _usage = """USAGE: gr <selector> [<git-command>] [<git-command-args>]
 
   Invoke a git command with a more sane range-selection syntax.
