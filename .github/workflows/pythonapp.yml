@@ -25,6 +25,8 @@ jobs:
       run: pip install black && black --check --quiet .
     - name: Typecheck
       run: pip install mypy && mypy --strict $(find . -name \*.py) > /dev/null
+    - name: README is up-to-date
+      run: python ./gen/mkreadme.py --check
     # - name: Test with pytest
     #   run: |
     #     pip install pytest
