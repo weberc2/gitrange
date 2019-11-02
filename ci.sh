@@ -8,7 +8,7 @@ mypy --strict $(find . -name \*.py) > /dev/null
 
 # Lint
 flake8
-isort --check --quiet --trailing-comma
+isort --check --quiet
 black --check --quiet .
 
 
