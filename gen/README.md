@@ -13,3 +13,9 @@ git subcommand.
 ## Usage
 
 {{ _usage }}
+
+## Contributing
+
+All pull requests must pass the checks in [pullrequest.sh](./pullrequest.sh).
+These include `mypy --strict` and `black --check` for all Python files.
+Further, this README.md

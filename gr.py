@@ -80,7 +80,7 @@ EXAMPLES
 
   Debug a range
 
-    $ gr -c . null
+    $ gr -c .
     HEAD~1..HEAD
 """
 
