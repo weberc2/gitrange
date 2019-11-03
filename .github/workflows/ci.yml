@@ -34,8 +34,7 @@ jobs:
         with:
           python-version: 3.7
       - name: Typecheck
-        run: |
-          pip install mypy && mypy --strict $(find . -name \*.py) > /dev/null
+        run: pip install mypy && mypy --strict > /dev/null
   generate-readme:
     runs-on: ubuntu-latest
     steps:

@@ -113,7 +113,7 @@ def evaluate_range(selector: str, argument: str) -> Tuple[str, str]:
     raise Exception(f"Unknown selector: {selector}")
 
 
-def main():
+def main() -> None:
     import sys
 
     if len(sys.argv) < 3:
