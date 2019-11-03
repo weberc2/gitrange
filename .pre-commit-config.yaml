@@ -1,0 +1,44 @@
+default_stages: [commit]
+
+default_language_version:
+  python: python3
+
+repos:
+  - repo: local
+    hooks:
+      - id: isort
+        name: isort
+        entry: isort
+        args: [--check]
+        language: python
+        types: [file, python]
+        additional_dependencies: [isort]
+      - id: black
+        name: black
+        entry: black
+        args: [--check]
+        language: python
+        types: [file, python]
+        additional_dependencies: [black]
+      - id: flake8
+        name: flake8
+        entry: flake8
+        language: python
+        types: [file, python]
+        additional_dependencies: [flake8]
+      - id: mypy
+        name: mypy
+        entry: mypy
+        exclude: setup.py
+        language: python
+        args: [--strict]
+        types: [file, python]
+        additional_dependencies: [mypy]
+      - id: check-readme
+        name: check-readme
+        entry: ./gen/mkreadme.py
+        args: [--check]
+        pass_filenames: false
+        language: python
+        files: ^gen/
+        types: [file]
