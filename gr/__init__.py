@@ -113,7 +113,7 @@ def evaluate_range(selector: str, argument: str) -> Tuple[str, str]:
     raise Exception(f"Unknown selector: {selector}")
 
 
-if __name__ == "__main__":
+def main() -> None:
     import sys
 
     if len(sys.argv) < 3:
@@ -132,3 +132,7 @@ if __name__ == "__main__":
     else:
         result = subprocess.run(["git"] + sys.argv[3:] + [range_])
         sys.exit(result.returncode)
+
+
+if __name__ == "__main__":
+    main()
