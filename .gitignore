@@ -1,3 +1,5 @@
 .mypy_cache
-*.egg-info
 .venv
+**/*.egg-info
+**/*.pyc
+**/__pycache__/
